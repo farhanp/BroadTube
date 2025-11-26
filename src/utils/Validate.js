@@ -2,7 +2,9 @@
 export const checkValidation = (name, email, password) => {
   const nameRegex = /^[a-zA-Z0-9_\s]+/.test(name);
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password);
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{8,}$/.test(
+    password
+  );
 
   if (!nameRegex)
     return "Name can only contain letters, numbers, and underscores";

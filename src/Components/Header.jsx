@@ -16,16 +16,16 @@ import {
 import { toggleGptResults } from "../utils/gptSlice";
 
 const NavButtons = ({ showGptSearch, handleGPTSearch }) => (
-  <div className="flex items-center justify-center border-2 bg-red-400 rounded-lg py-1">
+  <div className="flex items-center justify-center border-2 bg-[#7de38e] rounded-lg py-1">
     <button
       onClick={handleGPTSearch}
-      className="text-white hover:opacity-90 cursor-pointer gap-2 flex items-center px-4 sm:px-6 py-2 sm:py-1 mr-5 sm:mr-0 rounded-lg max-h-10 text-lg sm:text-md"
+      className="text-black hover:opacity-90 cursor-pointer gap-2 flex items-center px-4 sm:px-4 py-2 sm:py-1 mr-5 sm:mr-0 rounded-lg max-h-10 text-lg sm:text-md"
     >
       {!showGptSearch ? (
         <FontAwesomeIcon
           size="md"
           icon={faWandSparkles}
-          className="text-white"
+          className="text-black"
         />
       ) : (
         <FontAwesomeIcon size="md" icon={faHome} className="text-white" />
@@ -36,7 +36,7 @@ const NavButtons = ({ showGptSearch, handleGPTSearch }) => (
 );
 
 const UserInfo = ({ handleSignOut }) => (
-  <div className="flex items-center justify-center border-2 border-emerald-500 rounded-lg py-1">
+  <div className="flex items-center justify-center rounded-lg py-1">
     <button
       onClick={handleSignOut}
       type="button"
@@ -105,7 +105,7 @@ const Header = () => {
         <h1 className="text-emerald-400 text-3xl">broadTube</h1>
       </div>
       {user && (
-        <div className="flex items-center sm:gap-6 ml-auto">
+        <div className="flex items-center ml-auto">
           <div className="sm:hidden">
             <FontAwesomeIcon
               size="xl"

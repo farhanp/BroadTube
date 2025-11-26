@@ -87,6 +87,10 @@ const Login = () => {
 
   const toggleSignIn = () => {
     setIsSignedIn(!isSignedIn);
+    name.current && (name.current.value = "");
+    email.current.value = "";
+    password.current.value = "";
+    setErrorMessage(null);
   };
 
   return (
